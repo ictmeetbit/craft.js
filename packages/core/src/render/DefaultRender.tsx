@@ -29,7 +29,7 @@ export const DefaultRender = () => {
       );
     }
 
-    const render = React.createElement(type, props, children);
+    const render = React.createElement(type, props, children || null);
 
     if (typeof type == 'string') {
       return <SimpleElement render={render} />;
